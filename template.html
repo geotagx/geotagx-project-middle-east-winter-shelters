@@ -1,0 +1,539 @@
+<style>
+    .steps {
+        display: none;
+    }
+
+</style>
+
+<div class="row skeleton">
+    <div id="area0" class="col-xs-6">
+        <!-- Questionary -->
+    <!-- Step -1-->
+        <div id="step_relevant_filter" class="steps">
+            <h1>Is this photo spam?</h1>
+        <p>Sometimes, people collecting photos might accidentally send something not useful, like an advertisement.</p>
+        <p>If this photo is an advertisement or similar you should choose "Spam"</p>
+        <p>Selecting "Spam" will skip this photo</p>
+        <p>Selecting "Not Spam" or "I don't know" will allow you to go ahead with the analysis</p>
+        <p>If you are not sure, select "I don't know"</p>
+            <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <!-- If the user clicks this button, the saved answer will be value="yes"-->
+                <button class="step_relevant_filter btn btn-danger btn-answer" value='Yes'><i class="fa fa-white fa-thumbs-down"></i> Spam</button>
+                <!-- If the user clicks this button, the saved answer will be value="no"-->
+                <button class="step_relevant_filter btn btn-success btn-answer" value='No'><i class="fa fa-white fa-thumbs-up"></i> Not Spam</button>
+                <!-- If the user clicks this button, the saved answer will be value="NoPhoto"-->
+                <button class="step_relevant_filter btn btn-answer" value='NoPhoto'><i class="fa fa-white fa-exclamation"></i> No photo</button>
+                <!-- If the user clicks this button, the saved answer will be value="Unknown"-->
+                <button class="step_relevant_filter btn btn-answer" value='Unknown'><i class="fa fa-white fa-question-sign"></i> I don't know</button>
+            </div><!-- End of DIV for the submission buttons -->
+        </div>
+        <!-- End Step -1 -->
+
+       <!-- Step 0-->
+        <div id="step_0" class="steps">
+            <h1>Do you see shelter in this photo?</h1>
+      <div class="row help_popup col-xs-12">
+      <i class="fa fa-exclamation-circle"></i> How do I answer this question? <a class="help_popup_a" href="javascript:void(0)">Get some help</a>
+        <div class="help_popup_description col-xs-12">
+          <p>This is a filtering question to remove any photos that do not have shelter in them and therefore are not relevant to this analysis. <strong>For the purposes of this project, shelter refers to tents</strong></p>
+          <p>Click “Yes” is you see any shelter in the photo. </p>
+          <p>Click “No” if you do not see any shelter. This would include more permanent structures like demountable buildings and permanent buildings. If you are unsure if something is shelter, "don't know" is a valid and useful answer.</p>
+          <p>Here are some examples for which you would click "Yes":
+          <div class="row">
+            <div class="col-sm-6">
+              <a target="_blank" href="https://farm8.staticflickr.com/7419/16208614030_6d3b70b7a3_b.jpg"><img style="width:500px;" src="https://farm8.staticflickr.com/7419/16208614030_6d3b70b7a3_b.jpg" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i><a href="https://www.flickr.com/photos/130225227@N02/sets/72157650545270972/" target="_blank" style="font-size:10px;"><span class="fa fa-picture"></i>REACH</a></p>
+            </div>
+            <div class="col-sm-6">
+              <a target="_blank" href="https://farm8.staticflickr.com/7408/16396037175_b9aeda4b9a_b.jpg"><img style="width:500px;" src="https://farm8.staticflickr.com/7408/16396037175_b9aeda4b9a_b.jpg" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i> <a target="_blank" href="https://www.flickr.com/photos/130225227@N02/sets/72157650545270972/">REACH</a></p>
+            </div>
+          </div>
+          <p>And some for which you would click "No":
+          <div class="row">
+            <div class="col-sm-6">
+              <a target="_blank" href="https://farm9.staticflickr.com/8207/8264100892_26dfbab470_n.jpg"><img style="width:500px;" src="https://farm9.staticflickr.com/8207/8264100892_26dfbab470_n.jpg" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i><a href="https://www.flickr.com/photos/25857074@N03/sets/72157632218402821/" target="_blank" style="font-size:10px;"><span class="fa fa-picture"></i>UNHCR</a></p>
+            </div>
+            <div class="col-sm-6">
+              <a target="_blank" href="https://farm9.staticflickr.com/8201/8264101046_d56317b098_n.jpg"><img style="width:500px;" src="https://farm9.staticflickr.com/8201/8264101046_d56317b098_n.jpg" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i> <a target="_blank" href="https://www.flickr.com/photos/25857074@N03/sets/72157632218402821/">UNHCR</a></p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+            <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <!-- If the user clicks this button, the saved answer will be value="yes"-->
+                <button class="step_0 btn btn-success btn-answer" value='Yes'><i class="fa fa-white fa-thumbs-up"></i> Yes</button>
+                <!-- If the user clicks this button, the saved answer will be value="no"-->
+                <button class="step_0 btn btn-danger btn-answer" value='No'><i class="fa fa-white fa-thumbs-down"></i> No</button>
+                <!-- If the user clicks this button, the saved answer will be value="NoPhoto"-->
+                <button class="step_0 btn btn-answer" value='NotClear'><i class="fa fa-white"></i> Its not clear</button>
+                <!-- If the user clicks this button, the saved answer will be value="Unknown"-->
+                <button data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Did you read the Get Some Help section?" class="step_0 btn btn-answer" value='Unknown'><i class="fa fa-white fa-question-sign"></i> I don't know</button>
+            </div><!-- End of DIV for the submission buttons -->
+        </div>
+        <!-- End Step 0 -->
+
+    <!-- Step 1-->
+        <div id="step_1" class="steps">
+            <h1>Is the shelter raised off the ground?</h1>
+      <div class="row help_popup col-xs-12">
+      <i class="fa fa-exclamation-circle"></i> How do I answer this question? <a class="help_popup_a" href="javascript:void(0)">Get some help</a>
+        <div class="help_popup_description col-xs-12">
+          <p>This analysis is about whether shelter has a plinth or layer underneath that raises it off the ground. This gives the shelter some protection against flooding.</p><p> Click “Yes” if the shelter is raised from the ground, either by a wood or concrete layer or raised earth.</p><p> Click “No” if the shelter is clearly not raised off the ground.</p><p>If you are unsure, "don't know" is the best answer.</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <a target="_blank" href="http://cern.ch/unosat-sdn/ellie/Plinth1.png"><img style="width:500px;" src="http://cern.ch/unosat-sdn/ellie/Plinth1.png" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i><a href="http://www.stripes.com/refugees-in-jordan-welcome-possible-strike-against-syrian-regime-1.238336" target="_blank" style="font-size:10px;"><span class="fa fa-picture"></i>Stars and Stripes</a></p>
+            </div>
+            <div class="col-sm-6">
+              <a target="_blank" href="http://cern.ch/unosat-sdn/ellie/Plinth2.png"><img style="width:500px;" src="http://cern.ch/unosat-sdn/ellie/Plinth2.png" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i> <a target="_blank" href="https://www.flickr.com/photos/unhcr/3610080741/in/photolist-73EsL4-qvquNX-4bGb2K-6v1Bep-dkQes4-6yCymQ-7ADvJN-peLYCR-5rW57S-nywZAF-a9CU2s-51giX4-51kut1-bX1c1z-51gibc-51gj64-dArYDn-joi61f-51ku6f-7xiRzn-oipVPq-b2GUpa-8aBopN-9MLwHF-oxdA8w-bxzXPL-7ohtXo-oqCwPR-nAxnmu-oyazPU-dxfQ2h-nJuFmP-oPr9dr-hW7Tpc-7SSPrH-9MPz1s-nQAptN-hyFbJm-6FhrC5-hGpesF-8xrdXK-51giQM-6RkfrC-fF34uU-bxvbFV-eLiYEu-5N79zE-ifqC9u-jfsAR8-aiuEFD/">UNHCR</a></p>
+            </div>
+
+          </div>
+        </div>
+        </div>
+
+            <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <!-- If the user clicks this button, the saved answer will be value="yes"-->
+                <button class="step_1 btn btn-success btn-answer" value='Yes'><i class="fa fa-white fa-thumbs-up"></i> Yes</button>
+                <!-- If the user clicks this button, the saved answer will be value="no"-->
+                <button class="step_1 btn btn-danger btn-answer" value='No'><i class="fa fa-white fa-thumbs-down"></i> No</button>
+                <!-- If the user clicks this button, the saved answer will be value="NoPhoto"-->
+                <button class="step_1 btn btn-answer" value='NotClear'><i class="fa fa-white"></i> Its not clear</button>
+                <!-- If the user clicks this button, the saved answer will be value="Unknown"-->
+                <button data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Did you read 'Get some help' above?" class="step_1 btn btn-answer" value='Unknown'><i class="fa fa-white"></i>Don't know</button>
+            </div><!-- End of DIV for the submission buttons -->
+        </div>
+        <!-- End Step 1 -->
+
+    <!-- Step 2-->
+        <div id="step_2" class="steps">
+            <h1>Does the shelter have a second cover to protect it from the rain?</h1>
+      <div class="row help_popup col-xs-12">
+      <i class="fa fa-exclamation-circle"></i> How do I answer this question? <a class="help_popup_a" href="javascript:void(0)">Get some help</a>
+        <div class="help_popup_description col-xs-12">
+          <p>This analysis is about whether shelter has a second cover on top, called a fly sheet,
+            which protects against rain or snow. </p><p> Click “Yes” if you can see a second layer on top of the covering of the shelter. </p><p> Click “No” if the shelter appears to have only one layer. </p><p> If you are unsure, " I don't know" is the best answer.</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <a target="_blank" href="http://cern.ch/unosat-sdn/ellie/Rain1.png"><img style="width:500px;" src="http://cern.ch/unosat-sdn/ellie/Rain1.png" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i><a target="_blank" href="http://img.static.reliefweb.int/sites/reliefweb.int/files/styles/report-large/public/report-images/download_30.jpeg?itok=6YjhC7Pt" style="font-size:10px;"><span class="fa fa-picture"></i>ReliefWeb</a></p>
+            </div>
+            <div class="col-sm-6">
+              <a target="_blank" href="http://cern.ch/unosat-sdn/ellie/Rain2.png"><img style="width:500px;" src="http://cern.ch/unosat-sdn/ellie/Rain2.png" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i> <a target="_blank" href="https://www.flickr.com/photos/oxfam/5571660838">Oxfam</a></p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+            <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <!-- If the user clicks this button, the saved answer will be value="yes"-->
+                <button class="step_2 btn btn-success btn-answer" value='Yes'><i class="fa fa-white fa-thumbs-up"></i> Yes</button>
+                <!-- If the user clicks this button, the saved answer will be value="no"-->
+                <button class="step_2 btn btn-danger btn-answer" value='No'><i class="fa fa-white fa-thumbs-down"></i> No</button>
+                <!-- If the user clicks this button, the saved answer will be value="NoPhoto"-->
+                <button class="step_2 btn btn-answer" value='NotClear'><i class="fa fa-white"></i> Its not clear</button>
+                <!-- If the user clicks this button, the saved answer will be value="Unknown"-->
+                <button data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Did you read 'Get some help' above?" class="step_2 btn btn-answer" value='Unknown'><i class="fa fa-white fa-question-sign"></i>Don't know</button>
+            </div><!-- End of DIV for the submission buttons -->
+        </div>
+        <!-- End Step 2 -->
+
+    <!-- Step 3-->
+        <div id="step_3" class="steps">
+               <h1>Is there space to put a chimney safely inside the shelter?</h1>
+      <div class="row help_popup col-xs-12">
+      <i class="fa fa-exclamation-circle"></i> How do I answer this question? <a class="help_popup_a" href="javascript:void(0)">Get some help</a>
+        <div class="help_popup_description col-xs-12">
+          <p>To safely use a stove inside a shelter, there needs to be a chimney or space to put one without burning down the shelter or people inside inhaling smoke.</p><p> Click “Yes” if the shelter already has a chimney or if it has a metal plate to put a chimney pipe.</p><p> Click “No” if there would be no space to install a chimney safely. </p><p>If you are unsure, "don't know" is the best answer.</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <a target="_blank" href="http://cern.ch/unosat-sdn/ellie/Chimney1.png"><img style="width:500px;" src="http://cern.ch/unosat-sdn/ellie/Chimney1.png" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i><a target="_blank" href="http://s234.photobucket.com/user/whelenpg/media/huntingsept2009058.jpg.html" style="font-size:10px;"><span class="fa fa-picture"></i>whelenpg</a></p>
+            </div>
+            <div class="col-sm-6">
+              <a target="_blank" href="http://cern.ch/unosat-sdn/ellie/Chimney2.png"><img style="width:500px;" src="http://cern.ch/unosat-sdn/ellie/Chimney2.png" class="img-thumbnail"></a>
+              <p style="font-size:10px;"><span class="fa fa-picture"></i> <a target="_blank" href="http://i02.i.aliimg.com/img/pb/352/208/251/1274947623972_hz-myalibaba-web5_6139.jpg">Alibaba.com</a></p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+            <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <!-- If the user clicks this button, the saved answer will be value="yes"-->
+                <button class="step_3 btn btn-success btn-answer" value='Yes'><i class="fa fa-white fa-thumbs-up"></i> Yes</button>
+                <!-- If the user clicks this button, the saved answer will be value="no"-->
+                <button class="step_3 btn btn-danger btn-answer" value='No'><i class="fa fa-white fa-thumbs-down"></i> No</button>
+                <!-- If the user clicks this button, the saved answer will be value="NoPhoto"-->
+                <button class="step_3 btn btn-answer" value='NotClear'><i class="fa fa-white"></i> Its not clear</button>
+                <!-- If the user clicks this button, the saved answer will be value="Unknown"-->
+                <button data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Did you read 'Get some help' above?" class="step_3 btn btn-answer" value='Unknown'><i class="fa fa-white fa-question-sign"></i>Don't know</button>
+            </div><!-- End of DIV for the submission buttons -->
+        </div>
+        <!-- End Step 3 -->
+
+        <!-- Last Step -->
+        <div id="last_step" class="steps">
+            <h1>Thanks! Your analysis is complete.</h1>
+            <p> Please share your feedback! Get on <a href="https://github.com/geotagx/pybossa/issues">GitHub</a> or <a href="mailto:eleanor.rusack@unitar.org?Subject=GeoTag-X feedback" target="_top">send an email</a> if you prefer. </p>
+             <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <!-- If the user clicks this button, the saved answer will be value="yes"-->
+                <button class="last_step btn btn-answer btn-large btn-success" value='Submit'>Save it and load another one</button>
+            </div><!-- End of DIV for the submission buttons -->
+        </div>
+        <!-- End Last Step-->
+
+        <!-- End questionary -->
+        <div style="margin-top:5px;">
+            <button class="back btn btn-answer" style="display:none;"><i class="fa fa-chevron-left"></i> Go to previous step</button>
+        </div>
+    <br><br><br>
+    <div id="disqus_show_btn" style="margin-top:5px;">
+            <button class="btn btn-primary btn-large btn-disqus" onclick="loadDisqus()"><i class="icon-comments"></i> Show comments</button>
+            <button class="btn btn-large btn-disqus" onclick="loadDisqus()" style="display:none"><i class="icon-comments"></i> Hide comments</button>
+        </div><!-- End of Disqus Button section -->
+        <!-- Disqus thread for the given task -->
+        <div id="disqus_thread" style="margin-top:5px;display:none"></div>
+    </div>
+
+
+    <!--<div id="img-details" class="col-xs-4">-->
+        <!-- Collapse -->
+        <!--<div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                       EXIF data
+                    </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse in">
+                    <div id="exif" class="accordion-inner">
+                        This picture does not have any EXIF data.
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- End collapse -->
+        <!--</div>-->
+
+  <!-- +FC UNOSAT ZOOM MODIFICATION -->
+  <link type="text/css" src="https://raw.githubusercontent.com/spMohanty/Magnifier.js/master/magnifier.css" />
+    <div id="area1" class="col-xs-6 affix-top">
+    <div class="row">
+      <div class="col-xs-12" style="margin-top:10px;">
+          <a id="img_source" target="_blank" href="#"  class="btn btn-primary">View Photo Source</a>
+          <br>
+          Hover over image to zoom, use the mouse scroll wheel to zoom in and out (<a target="_blank" href="http://mark-rolich.github.io/Magnifier.js/">Magnifier.js</a>)
+
+      </div>
+
+     <div style="margin: 0 auto">
+        <a class="magnifier-thumb-wrapper demo col-xs-12">
+            <img style="width:100%" id="thumb" src="http://i.imgur.com/GeHxzb7.png">
+        </a>
+    </div>
+    <div class="magnifier-preview col-xs-12" style="height: 300px" id="preview"></div>
+
+    </div>
+    </div>
+
+
+
+  <!-- -FC UNOSAT ZOOM MODIFICATION -->
+
+</div><!-- End of Skeleton Row -->
+
+<div class="row">
+    <!-- Success and Error Messages for the user -->
+    <div class="col-xs-6 col-xs-offset-2" style="height:50px">
+        <div id="success" class="alert alert-success" style="display:none;">
+            <a class="close">×</a>
+            <strong>Well done!</strong> Your answer has been saved
+        </div>
+        <div id="loading" class="alert alert-info" style="display:none;">
+            <a class="close">×</a>
+            Loading next task...
+        </div>
+        <div id="taskcompleted" class="alert alert-info" style="display:none;">
+            <strong>The task has been completed!</strong> Thanks a lot!
+        </div>
+        <div id="finish" class="alert alert-success" style="display:none;">
+            <strong>Congratulations!</strong> You have participated in all available tasks!
+            <br/>
+            <div class="alert-actions">
+                <a class="btn small" href="/">Go back</a>
+                <a class="btn small" href="/app">or, Check other applications</a>
+            </div>
+        </div>
+        <div id="error" class="alert alert-error" style="display:none;">
+            <a class="close">×</a>
+            <strong>Error!</strong> Something went wrong, please contact the site administrators
+        </div>
+    </div> <!-- End Success and Error Messages for the user -->
+</div> <!-- End of Row -->
+
+
+<!-- +FC UNOSAT WORKFLOW/ZOOM/HELP MODIFICATION -->
+<script src="/static/js/pybossa/unosat.js"></script>
+<script src="/static/js/pybossa/help_toggle.js"></script>
+<script src="/static/js/pybossa/zoom.js"></script>
+<!-- -FC UNOSAT WORKFLOW/ZOOM/HELP MODIFICATION -->
+<!-- +Magnifier -->
+<script type="text/javascript" src="/static/js/pybossa/Event.js"></script>
+<script type="text/javascript" src="/static/js/pybossa/Magnifier.js"></script>
+<!-- +Magnifier -->
+<script type="text/javascript">
+  function loadDisqus() {
+    $("#disqus_thread").toggle();
+    $(".btn-disqus").toggle();
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geotagx'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+<script>
+
+pybossa.taskLoaded(function(task, deferred) {
+    if ( ! $.isEmptyObject(task) ) {
+        // load image from flickr
+        var img = $('<img />');
+        img.load(function() {
+            // continue as soon as the image is loaded
+            console.log($("#photo-link img").css("width"));
+            deferred.resolve(task);
+        });
+        img.attr('src', task.info.url);
+        img.attr('id', 'anno_' + task.id);
+        img.addClass('img-polaroid');
+        img.addClass('annotable');
+        task.info.image = img;
+        // Initiate answer with default values
+        task.steps = [0];
+        task.answer = {"img": task.info.url,
+                       "task_id": task.id,
+                       "shelter": "",
+                       "shelterraised": "",
+             "shelterflysheet": "",
+                       "shelterchimney": "",}
+    }
+    else {
+        deferred.resolve(task);
+    }
+});
+
+pybossa.presentTask(function(task, deferred) {
+    if ( !$.isEmptyObject(task) ) {
+        $('#photo-link').html('').append(task.info.image);
+        $('#task-id').html(task.id);
+    var evt = new Event(),
+    m = new Magnifier(evt);
+
+    m.attach({
+        thumb: '#thumb',
+        large: task.info.url,
+        largeWrapper: 'preview',
+        mode:'inside',
+        zoom: 5,
+        zoomable: true
+    });
+    console.log(task.info);
+    console.log(m);
+
+    $("#img_source").attr("href", task.info.uri);
+    $("#thumb").attr("src", task.info.url);
+    // $("#preview").html("");
+    // $("#preview").css({'height':($("#photo-link").height()+'px')});
+    // $("#preview").css({'width':($("#photo-link").width()+'px')});
+        $(".back").hide();
+
+        // Hide all steps first
+        $(".steps").hide();
+        // Show first step
+        $("#step_relevant_filter").show();
+        // Reset input fields
+        //$("#n_stories").val(0);
+
+        $('.btn-answer').off('click').on('click', function(evt) {
+            // Get value of pressed button
+            var tmp = $(evt.target).attr("value");
+
+      // PAGINATION
+
+      var pag_max_steps = $(".steps").length;
+      var pag_n_steps = $(".steps").index($(".steps:visible"));
+      var pag_perc=(((pag_n_steps+1)/(pag_max_steps-1))*100).toFixed(0);
+      $("#progress_bar_task").css("width",pag_perc+"%");
+      $("#progress_bar_task").html(pag_perc+"%");
+
+      // PAGINATION
+      if ($("#disqus_thread").is(":visible")) {
+                    $('#disqus_thread').toggle();
+                    $('.btn-disqus').toggle();
+                }
+      // Check if step is the photo filter
+            if ($(evt.target).hasClass('step_relevant_filter')) {
+
+                $(".steps").hide();
+                if (tmp == "No") {
+                    //alert("DB: Yes");
+                    $("#step_0").show();
+
+                    }
+                else {
+          //alert("DB: No ajax");
+          //$.ajax({
+            //url: url + 'api/filter/' + taskid +'/no',
+            //dataType: 'json'
+          //});
+                    //$("#last_step").show();
+          $("#progress_bar_task").css("width","100%");
+          $("#progress_bar_task").html("100%");
+                    $("#last_step").show();
+                }
+            }
+
+            // Check if step is 0
+            if ($(evt.target).hasClass('step_0')) {
+                task.answer.shelter = tmp;
+                $(".steps").hide();
+                if (tmp == "Yes") {
+                    task.steps.push(1);
+                    $("#step_1").show();
+                    $(".back").show();
+                    }
+                else {
+                    $("#last_step").show();
+                }
+            }
+             // Check if step is 1
+            if ($(evt.target).hasClass('step_1')) {
+                task.answer.shelterraised = tmp;
+                $(".steps").hide();
+                task.steps.push(2);
+                $("#step_2").show();
+            }
+
+              // Check if step is 2
+            if ($(evt.target).hasClass('step_2')) {
+                task.answer.shelterflysheet = tmp;
+                $(".steps").hide();
+                task.steps.push(3);
+                $("#step_3").show();
+            }
+
+        // Check if step is 3
+            if ($(evt.target).hasClass('step_3')) {
+                  task.answer.shelterchimney = tmp;
+                $(".steps").hide();
+                $("#last_step").show();
+            }
+
+            // Check if step is last
+            if ($(evt.target).hasClass('last_step')) {
+                zoomout();
+        $(".help_popup_description").css("display","none");
+                $("input:checkbox").removeAttr("checked");
+                //+FC UNOSAT WORKFLOW MODIFICATION
+                saveTask(task.id, task.answer).done(function() {
+                deferred.resolve();
+                })
+                //-FC UNOSAT WORKFLOW MODIFICATION
+            }
+
+            // Check if back button is pressed
+            if ($(evt.target).hasClass('back')) {
+                console.log(JSON.stringify(task.steps));
+                zoomout();
+                $("#last_step").hide();
+                var last_step = task.steps.pop();
+                var id = "#step_" + last_step.toString();
+                var prev_id = "#step_" + task.steps[task.steps.length - 1];
+                $(id).hide();
+                $(prev_id).show();
+                if (prev_id == "#step_0") {
+                    $(".back").hide();
+                    task.steps = [0];
+                }
+
+                //if ((prev_id == "#step_9") || (prev_id == "#step_11") || (prev_id == '#step_14') || (prev_id == '#step_15')) {
+                //    anno.reset();
+                //    $("#crack_category").hide();
+                //    $("#crack_rebars").hide();
+                //    $("#crack_rebars").hide();
+                //    $("#damage_category").hide();
+                //    $("#answer").hide();
+                //}
+
+                console.log(JSON.stringify(task.steps));
+            }
+            // print answer on console
+            // console.log(JSON.stringify(task.answer));
+        });
+
+
+        //$("#btn-submit").html("<i class='fa-repeat'></i> I don't recognize any person, try next one");
+        //$("#btn-submit").removeClass("btn-success");
+        //if (!$.isEmptyObject(task.info.exif)) {
+        //    //var keys = Object.keys(task.info.exif);
+        //    //$("#exif").html("");
+        //    //for(i=0;i<keys.length;i++){
+        //    //$("#exif").append("<p><strong>" + keys[i] + "</strong>: " + task.info.exif[keys[i]] + "</p>");
+        //    //}
+        //    $("#exif").html(JSON.stringify(task.info.exif));
+        //}
+        //else {
+        //    $("#exif").html("There is no EXIF data in this picture.");
+        //}
+
+        //anno.makeAnnotatable(document.getElementById('anno_' + task.id));
+
+        //anno.addHandler('onAnnotationCreated', function(annotation) {
+        //    //console.log(annotation.text);
+        //    $("#btn-submit").html("<i class='fa fa-save'></i> Save current annotations");
+        //    $("#btn-submit").addClass("btn-success");
+        //});
+
+        //$('.btn-answer').off('click').on('click', function(evt) {
+        //    var answer = $(evt.target).attr("value");
+        //    if (typeof answer != 'undefined') {
+        //        //console.log(answer);
+        //        pybossa.saveTask(task.id, anno.getAnnotations()).done(function() {
+        //            deferred.resolve();
+        //        });
+        //        $("#loading").fadeIn(500);
+        //        if ($("#disqus_thread").is(":visible")) {
+        //            $('#disqus_thread').toggle();
+        //            $('.btn-disqus').toggle();
+        //        }
+        //    }
+        //    else {
+        //        $("#error").show();
+        //    }
+        //});
+        $("#loading").hide();
+    }
+    else {
+        $(".skeleton").hide();
+        $("#loading").hide();
+        $("#finish").fadeIn(500);
+    }
+});
+
+
+
+
+//+FC UNOSAT WORKFLOW MODIFICATION
+make_run('wintershelter','wintershelter');
+//-FC UNOSAT WORKFLOW MODIFICATION
+
+</script>

@@ -11,11 +11,11 @@
 			"title":"Do you see shelter in this photo?",
 			"type":"binary",
 			"answer":{
-				"saved_as":"shelter",
-				"branch":[
-					{"no":"finish"}
-				]
-			}
+				"saved_as":"shelter"
+			},
+			"branch":[
+				{"no":"finish"}
+			]
 		},
 		{
 			"id":2,

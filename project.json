@@ -1,0 +1,45 @@
+{
+	"name":"Are shelters prepared for winter?",
+	"short_name":"wintershelter",
+	"category":"Emergency Shelter Assessment in the Middle East",
+	"description":"Shelter assessments for winter",
+	"why":"TODO",
+	"icon_link":"https://farm8.staticflickr.com/7419/16208614030_6d3b70b7a3_b.jpg",
+	"questions":[
+		{
+			"id":1,
+			"title":"Do you see shelter in this photo?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"shelter",
+				"branch":[
+					{"no":"finish"}
+				]
+			}
+		},
+		{
+			"id":2,
+			"title":"Is the shelter raised off the ground?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"shelterraised"
+			}
+		},
+		{
+			"id":3,
+			"title":"Does the shelter have a second cover to protect it from the rain?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"shelterflysheet"
+			}
+		},
+		{
+			"id":4,
+			"title":"Is there space to put a chimney safely inside the shelter?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"shelterchimney"
+			}
+		}
+	]
+}

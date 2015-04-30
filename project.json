@@ -2,9 +2,8 @@
 	"name":"Are shelters prepared for winter?",
 	"short_name":"wintershelter",
 	"category":"Emergency Shelter Assessment in the Middle East",
-	"description":"Shelter assessments for winter",
-	"why":"TODO",
-	"icon_link":"https://farm8.staticflickr.com/7419/16208614030_6d3b70b7a3_b.jpg",
+	"description":"Shelter assessments for winter.",
+	"why":"This project helps assess whether emergency shelters are suitably prepared for winter by answering questions about a series of photographs from displacement sites in Jordan and Iraq.",
 	"questions":[
 		{
 			"id":1,

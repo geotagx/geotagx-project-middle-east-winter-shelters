@@ -1,0 +1,43 @@
+{
+	"tutorial":[
+		{
+			"image":"https://farm6.staticflickr.com/5062/5571660838_720c2c0b38_b.jpg",
+			"image_source":"https://www.flickr.com/photos/oxfam/5571660838",
+			"assertions":{
+				"1":{
+					"expects":"yes",
+					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
+					"messages":{
+						"yes":"Well done! There are shelters visible in this photo.",
+						"no":"Are you sure there are no shelters in this photo? If you are not sure what to look for, check out the help for more information."
+					}
+				},
+				"2":{
+					"expects":"yes",
+					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
+					"messages":{
+						"yes":"Correct! There appears to be a layer of raised earth below these tents.",
+						"no":"If you take a closer look, can you see raised earth under the edges of the tent?"
+					}
+				},
+				"3":{
+					"expects":"yes",
+					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
+					"messages":{
+						"yes":"Correct! There is a second cover, also known as a flysheet, on these tents.",
+						"no":"Are you sure there is no second cover on the tent to protect it from the rain?"
+					}
+				},
+				"4":{
+					"expects":"unknown",
+					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
+					"messages":{
+						"unknown":"Well done! At first glance, it doesn't appear that the tents are set up to build a safe chimney inside, but we can't see the other sides of the tent very well so we simply cannot tell from looking at this photo.",
+						"yes":"Are you absolutely sure you could safely set up a chimney inside the tents?",
+						"no":"At first glance, it doesn't appear that the tents are set up to build a safe chimney inside, but what about the sides of the tent?"
+					}
+				}
+			}
+		}
+	]
+}

@@ -18,7 +18,7 @@ To understand more about the concrete impacts of this approach, read how [storm 
 
 
 ### How does it work?
-Answer the questions as best you can, we highly recommend [**taking the tutorial**](http://geotagx.org/app/tutorial_wintershelter/newtask) before starting so you know what to look for.
+Answer the questions as best you can, we highly recommend taking the tutorial before starting so you know what to look for.
 
 If you need some pointers, you can click on the **help** for each question.
 

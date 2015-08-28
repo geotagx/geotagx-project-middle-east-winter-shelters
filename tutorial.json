@@ -29,10 +29,10 @@
 					}
 				},
 				"4":{
-					"expects":"unknown",
+					"expects":"notclear",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
-						"unknown":"Well done! At first glance, it doesn't appear that the tents are set up to build a safe chimney inside, but we can't see the other sides of the tent very well so we simply cannot tell from looking at this photo.",
+						"notclear":"Well done! At first glance, it doesn't appear that the tents are set up to build a safe chimney inside, but we can't see the other sides of the tent very well so we simply cannot tell from looking at this photo.",
 						"yes":"Are you absolutely sure you could safely set up a chimney inside the tents?",
 						"no":"At first glance, it doesn't appear that the tents are set up to build a safe chimney inside, but what about the sides of the tent?"
 					}

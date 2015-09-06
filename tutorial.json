@@ -4,7 +4,7 @@
 			"image":"https://farm6.staticflickr.com/5062/5571660838_720c2c0b38_b.jpg",
 			"image_source":"https://www.flickr.com/photos/oxfam/5571660838",
 			"assertions":{
-				"1":{
+				"shelter":{
 					"expects":"yes",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -12,7 +12,7 @@
 						"no":"Are you sure there are no shelters in this photo? If you are not sure what to look for, check out the help for more information."
 					}
 				},
-				"2":{
+				"shelterraised":{
 					"expects":"yes",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -20,7 +20,7 @@
 						"no":"If you take a closer look, can you see raised earth under the edges of the tent?"
 					}
 				},
-				"3":{
+				"shelterflysheet":{
 					"expects":"yes",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{
@@ -28,7 +28,7 @@
 						"no":"Are you sure there is no second cover on the tent to protect it from the rain?"
 					}
 				},
-				"4":{
+				"shelterchimney":{
 					"expects":"notclear",
 					"default_message":"Try again. If you are not sure what to look for, check out the help for more information.",
 					"messages":{

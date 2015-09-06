@@ -4,41 +4,29 @@
 	"category":"Emergency Shelter Assessment in the Middle East",
 	"description":"Shelter assessments for winter.",
 	"why":"This project helps assess whether emergency shelters are suitably prepared for winter by answering questions about a series of photographs from displacement sites in Jordan and Iraq.",
-	"questions":[
+	"questionnaire":[
 		{
-			"id":1,
-			"title":"Do you see shelter in this photo?",
+			"question":"Do you see shelter in this photo?",
+			"key":"shelter",
 			"type":"binary",
-			"answer":{
-				"saved_as":"shelter"
-			},
-			"branch":[
-				{"no":"finish"}
-			]
-		},
-		{
-			"id":2,
-			"title":"Is the shelter raised off the ground?",
-			"type":"binary",
-			"answer":{
-				"saved_as":"shelterraised"
+			"branch":{
+				"no":"end"
 			}
 		},
 		{
-			"id":3,
-			"title":"Does the shelter have a second cover to protect it from the rain?",
-			"type":"binary",
-			"answer":{
-				"saved_as":"shelterflysheet"
-			}
+			"question":"Is the shelter raised off the ground?",
+			"key":"shelterraised",
+			"type":"binary"
 		},
 		{
-			"id":4,
-			"title":"Is there space to put a chimney safely inside the shelter?",
-			"type":"binary",
-			"answer":{
-				"saved_as":"shelterchimney"
-			}
+			"question":"Does the shelter have a second cover to protect it from the rain?",
+			"key":"shelterflysheet",
+			"type":"binary"
+		},
+		{
+			"question":"Is there space to put a chimney safely inside the shelter?",
+			"key":"shelterchimney",
+			"type":"binary"
 		}
 	]
 }
